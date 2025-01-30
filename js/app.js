@@ -30,7 +30,6 @@ const questions = [
     answer: "جاوا اسکریپت",
   },
 ];
-
 const questionTitle = document.querySelector(".question");
 const questionsOptionsContainer = document.querySelector(".questions");
 const currentQuestionElem = document.querySelector(".current");
@@ -43,10 +42,8 @@ const resultStatus = document.querySelector(".result");
 const closeModalBtn = document.querySelector('.close')
 const resetApp = document.querySelector('.continue')
 const closeModalX = document.querySelector('.close-x')
-
 let currentQuestionIndex = 0;
 let score = 0;
-
 function showQuestion() {
 
   const questionsObj = questions[currentQuestionIndex]
@@ -112,20 +109,13 @@ function showResult() {
 
 
 
-  finalResultText.innerHTML = ''
+
   modal.classList.remove('hidden')
-  finalResultText.insertAdjacentHTML('beforeend',
-    `
-    <p class="final-result">
-            شما تونستید <span class="answered-questions"> ${score} </span> پاسخ صحیح از
-            <span class="total-questions"> 5 </span> سوال بدید.
-    </p>
-    `
-  )
+  finalResultText.innerHTML = ` شما تونستید ${score} پاسخ صحیح ${questions.length} از سوال بدید. `
 
   let scoreResult = document.querySelector('.answered-questions')
 
-  if (scoreResult.innerHTML < 3) {
+  if (score < 3) {
     resultStatus.classList.remove('good')
     resultStatus.classList.add('bad')
     resultStatus.innerHTML = 'بد'
@@ -139,24 +129,17 @@ function showResult() {
 function closeModal() {
   modal.classList.add('hidden')
 }
-
-
-
-
 nextQuestionsBtn.addEventListener("click", function () {
   checkAnswer();
   currentQuestionIndex++;
 
   if (currentQuestionIndex === 4) {
     nextQuestionsBtn.style.display = "none";
-    resultButton.classList.remove('hidden')
+    resultButton.classList.remove("hidden");
   }
 
   showQuestion();
 });
-
-
-
 resultButton.addEventListener('click', showResult)
 closeModalBtn.addEventListener('click', closeModal)
 closeModalX.addEventListener('click', closeModal)
