@@ -141,16 +141,22 @@ function closeModal() {
 }
 
 
+
+
 nextQuestionsBtn.addEventListener("click", function () {
   checkAnswer();
   currentQuestionIndex++;
 
   if (currentQuestionIndex === 4) {
     nextQuestionsBtn.style.display = "none";
+    resultButton.classList.remove('hidden')
   }
 
   showQuestion();
 });
+
+
+
 resultButton.addEventListener('click', showResult)
 closeModalBtn.addEventListener('click', closeModal)
 closeModalX.addEventListener('click', closeModal)
