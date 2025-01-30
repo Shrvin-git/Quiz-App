@@ -2,66 +2,68 @@
 
 <!DOCTYPE html>
 <html lang="fa-IR" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>سبزلرن - بازی پرسشنامه</title>
-    <link rel="stylesheet" href="./public/css/styles.css" />
-  </head>
-  <body onload="showQuestion()">
-    <section class="container">
-      <h1 class="question">نکست جی اس در چه سالی منتشر شد؟</h1>
-      <div>
-        <p class="quest-index">
-          پرسش <span class="current">1</span> از
-          <span class="total">5</span>
-          پرسش
-        </p>
-      </div>
-      <div class="questions">
-        <article class="quest">
-          <input type="radio" name="questbox" id="quest-1" />
-          <label for="quest-1" class="answer-title">نکست جی اس</label>
-        </article>
-        <article class="quest selected">
-          <input type="radio" name="questbox" id="quest-2" />
-          <label for="quest-2" class="answer-title">نکست جی اس</label>
-        </article>
-        <article class="quest">
-          <input type="radio" name="questbox" id="quest-3" />
-          <label for="quest-3" class="answer-title">نکست جی اس</label>
-        </article>
-      </div>
-      <div class="buttons">
-        <button class="result-button hidden">نتیجه</button>
-        <button class="next">بعدی</button>
-      </div>
-    </section>
 
-    <div class="modal-screen hidden">
-      <article class="modal">
-        <header>
-          <span>نتیجه پرسش نامه</span>
-          <button class="close-x">X</button>
-        </header>
-        <main>
-          <div class="result-card">
-            <p>نتیجه:</p>
-            <p class="result bad">بد!</p>
-          </div>
-          <p class="final-result">
-            شما تونستید <span class="answered-questions">2</span> پاسخ صحیح از
-            <span class="total-questions">5</span> سوال بدید.
-          </p>
-        </main>
-        <footer class="modal-footer">
-          <button class="close">انصراف</button>
-          <button class="continue">تلاش مجدد</button>
-        </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بازی پرسشنامه</title>
+  <link rel="stylesheet" href="./public/css/styles.css" />
+</head>
+
+<body onload="showQuestion()">
+  <section class="container">
+    <h1 class="question">نکست جی اس در چه سالی منتشر شد؟</h1>
+    <div>
+      <p class="quest-index">
+        پرسش <span class="current">1</span> از
+        <span class="total">5</span>
+        پرسش
+      </p>
+    </div>
+    <div class="questions">
+      <article class="quest">
+        <input type="radio" name="questbox" id="quest-1" />
+        <label for="quest-1" class="answer-title">نکست جی اس</label>
+      </article>
+      <article class="quest selected">
+        <input type="radio" name="questbox" id="quest-2" />
+        <label for="quest-2" class="answer-title">نکست جی اس</label>
+      </article>
+      <article class="quest">
+        <input type="radio" name="questbox" id="quest-3" />
+        <label for="quest-3" class="answer-title">نکست جی اس</label>
       </article>
     </div>
+    <div class="buttons">
+      <button class="result-button hidden">نتیجه</button>
+      <button class="next">بعدی</button>
+    </div>
+  </section>
+
+  <div class="modal-screen hidden">
+    <article class="modal">
+      <header>
+        <span>نتیجه پرسش نامه</span>
+        <button class="close-x">X</button>
+      </header>
+      <main>
+        <div class="result-card">
+          <p>نتیجه:</p>
+          <p class="result bad">بد!</p>
+        </div>
+        <p class="final-result">
+          شما تونستید 2 پاسخ صحیح 5 از سوال بدید.
+        </p>
+      </main>
+      <footer class="modal-footer">
+        <button class="close">انصراف</button>
+        <button class="continue">تلاش مجدد</button>
+      </footer>
+    </article>
+  </div>
 
 
-    <script src="./js/app.js"></script>
-  </body>
+  <script src="./js/app.js"></script>
+</body>
+
 </html>
